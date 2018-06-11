@@ -1,0 +1,15 @@
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom {
+  &--sm {
+    margin-bottom: 1.5rem;
+  }
+  &--md {
+    margin-bottom: 4rem;
+  }
+  &--lg {
+    margin-bottom: 8rem;
+  }
+}
