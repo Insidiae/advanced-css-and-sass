@@ -31,3 +31,13 @@
     margin-top: 10rem;
   }
 }
+
+.u-hide-overflow {
+  overflow: hidden;
+  &-x {
+    overflow-x: hidden;
+  }
+  &-y {
+    overflow-y: hidden;
+  }
+}

@@ -6,6 +6,13 @@
   }
 }
 
+@mixin abscenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @mixin column($part, $max) {
   .col-#{$part}-of-#{$max} {
     width: calc(#{$part} * (100% - (#{$max} - 1) * #{$gutter-horizontal}) / #{$max} + (#{$part} - 1) * #{$gutter-horizontal});

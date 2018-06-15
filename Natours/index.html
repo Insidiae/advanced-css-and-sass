@@ -15,6 +15,40 @@
 </head>
 
 <body>
+  <div class="navigation">
+    <input type="checkbox" id="navi-toggle" class="navigation__checkbox">
+    <label for="navi-toggle" class="navigation__btn">
+      <span class="navigation__btn__icon">&nbsp;</span>
+    </label>
+
+    <div class="navigation__bg">&nbsp;</div>
+
+    <nav class="navigation__nav">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a href="#about" class="navigation__link">
+            <span class="navigation__item__num">01</span>About Natours</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#features" class="navigation__link">
+            <span class="navigation__item__num">02</span>Your Benefits</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#tours" class="navigation__link">
+            <span class="navigation__item__num">03</span>Popular Tours</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#stories" class="navigation__link">
+            <span class="navigation__item__num">04</span>Stories</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#terms" class="navigation__link">
+            <span class="navigation__item__num">05</span>Book Now</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
   <header class="header">
     <div class="header__logo-box">
       <img class="header__logo" src="img/logo-white.png" alt="Natours Logo">
@@ -26,12 +60,12 @@
         <span class="heading-primary--sub">is where life happens</span>
       </h1>
 
-      <a href="#" class="btn btn--white btn--animated">Discover our Tours</a>
+      <a href="#tours" class="btn btn--white btn--animated">Discover our Tours</a>
     </div>
   </header>
 
   <main>
-    <section class="section-about">
+    <section id="about" class="section-about">
       <div class="u-center-text u-margin-bottom--lg">
         <h2 class="heading-secondary">Exciting tours for adventurous people</h2>
       </div>
@@ -57,7 +91,7 @@
         </div>
       </div>
     </section>
-    <section class="section-features">
+    <section id="features" class="section-features">
       <div class="row">
         <div class="col-1-of-4">
           <div class="feature-box">
@@ -91,7 +125,7 @@
     </section>
     <section class="section-tours">
       <div class="u-center-text u-margin-bottom--lg">
-        <h2 class="heading-secondary">Most Popular Tours</h2>
+        <h2 id="tours" class="heading-secondary">Most Popular Tours</h2>
       </div>
 
       <div class="row">
@@ -118,7 +152,7 @@
                   <p class="card__price__text">Only</p>
                   <p class="card__price__value">$297</p>
                 </div>
-                <a href="#" class="btn btn--white">Book now!</a>
+                <a href="#terms" class="btn btn--white">Book now!</a>
               </div>
             </div>
           </div>
@@ -146,7 +180,7 @@
                   <p class="card__price__text">Only</p>
                   <p class="card__price__value">$497</p>
                 </div>
-                <a href="#" class="btn btn--white">Book now!</a>
+                <a href="#terms" class="btn btn--white">Book now!</a>
               </div>
             </div>
           </div>
@@ -174,7 +208,7 @@
                   <p class="card__price__text">Only</p>
                   <p class="card__price__value">$897</p>
                 </div>
-                <a href="#" class="btn btn--white">Book now!</a>
+                <a href="#terms" class="btn btn--white">Book now!</a>
               </div>
             </div>
           </div>
@@ -194,7 +228,7 @@
       </div>
 
       <div class="u-center-text u-margin-bottom--lg">
-        <h2 class="heading-secondary">We Make People Genuinely Happy</h2>
+        <h2 id="stories" class="heading-secondary">We Make People Genuinely Happy</h2>
       </div>
 
       <div class="row">
@@ -230,7 +264,7 @@
         <a href="#" class="btn-text">Read all stories &rarr;</a>
       </div>
     </section>
-    <section class="section-booking">
+    <section id="booking" class="section-booking">
       <div class="row">
         <div class="book">
           <div class="book__form-container">
@@ -311,6 +345,29 @@
       </div>
     </div>
   </footer>
+
+  <div id="terms" class="popup">
+    <div class="popup__content">
+      <div class="popup__left">
+        <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+        <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+      </div>
+      <div class="popup__right">
+        <a href="#tours" class="popup__close">&times;</a>
+        <h2 id="tours" class="heading-secondary u-margin-bottom--sm">Start Booking Now</h2>
+        <h3 class="heading-tertiary u-margin-bottom--sm">Important &ndash; Please read these terms before booking</h3>
+        <p lang="en" class="popup__text">This service is meant for recreational purposes only. Subject to change without notice. Times approximate. Simulated
+          picture. Void where prohibited. Always fasten your safety belt. Beware of dog. Tax, tag, and title not included
+          in advertised price. Price slightly higher east of Alaska. No Canadian coins. An 18% gratuity will be added for
+          parties of 10 or more. Not recommended for children. List each check separately by bank number. Not responsible
+          for direct, indirect, incidental or consequential damages resulting from any defect, error or failure to perform.
+          At participating locations only. As seen on TV. Substantial penalty for early withdrawal. Do not write below this
+          line. Falling rock. Lost ticket pays maximum rate. Your canceled check is your receipt. Place stamp here. No solicitors.
+          No alcohol, dogs or horses. No anchovies unless otherwise specified.</p>
+        <a href="#booking" class="btn btn--green">Book Now</a>
+      </div>
+    </div>
+  </div>
   <!-- Uncomment the code below to view the grid system -->
   <!-- <section class="grid-test">
         <div class="row">
@@ -342,6 +399,8 @@
             <div class="col-3-of-4">Column 3 of 4</div>
         </div>
     </section> -->
+
+  <script src="js/nav.js"></script>
 </body>
 
 </html>
