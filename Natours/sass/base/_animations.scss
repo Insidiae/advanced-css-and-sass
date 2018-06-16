@@ -36,3 +36,20 @@
     transform: translate(0);
   }
 }
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  25% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+}

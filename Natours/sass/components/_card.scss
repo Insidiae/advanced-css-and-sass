@@ -32,6 +32,7 @@
           $color-secondary-dark
         );
       }
+
       &--2 {
         background-image: linear-gradient(
           to right bottom,
@@ -39,6 +40,7 @@
           $color-primary-dark
         );
       }
+
       &--3 {
         background-image: linear-gradient(
           to right bottom,
@@ -48,14 +50,17 @@
       }
     }
   }
+
   &:hover &__side {
     &--front {
       transform: rotateY(-180deg);
     }
+
     &--back {
       transform: rotateY(0);
     }
   }
+
   // Front side
   &__picture {
     height: 23rem;
@@ -66,6 +71,7 @@
     // clip-path seems to break the overflow setting, so we need to manually specify the border--radiuses here
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+
     &--1 {
       background-image: linear-gradient(
           to right bottom,
@@ -74,6 +80,7 @@
         ),
         url(../img/nat-5.jpg);
     }
+
     &--2 {
       background-image: linear-gradient(
           to right bottom,
@@ -82,6 +89,7 @@
         ),
         url(../img/nat-6.jpg);
     }
+
     &--3 {
       background-image: linear-gradient(
           to right bottom,
@@ -91,6 +99,7 @@
         url(../img/nat-7.jpg);
     }
   }
+
   &__heading {
     position: absolute;
     top: 12rem;
@@ -102,10 +111,12 @@
     text-align: right;
     color: $color-white;
   }
+
   &__heading-container {
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+
     &--1 {
       background-image: linear-gradient(
         to right bottom,
@@ -113,6 +124,7 @@
         rgba($color-secondary-dark, 0.85)
       );
     }
+
     &--2 {
       background-image: linear-gradient(
         to right bottom,
@@ -120,6 +132,7 @@
         rgba($color-primary-dark, 0.85)
       );
     }
+
     &--3 {
       background-image: linear-gradient(
         to right bottom,
@@ -128,38 +141,96 @@
       );
     }
   }
+
   &__details {
     padding: 3rem;
+
     &__list {
       list-style: none;
       width: 80%;
       margin: 0 auto;
+
       &__elem {
         text-align: center;
         font-size: 1.5rem;
         padding: 1rem;
+
         &:not(:last-child) {
           border-bottom: 1px solid $color-gray-light-2;
         }
       }
     }
   }
+
   // Back side
   &__cta {
     @include abscenter;
     width: 90%;
     text-align: center;
   }
+
   &__price {
     margin-bottom: 8rem;
     color: $color-white;
+
     &__text {
       font-size: 1.4rem;
       text-transform: uppercase;
     }
+
     &__value {
       font-size: 6rem;
       font-weight: 100;
+    }
+  }
+
+  // Responsive styles
+  @include respond(tab-port) {
+    height: auto;
+    border-radius: 3px;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &__side {
+      position: relative;
+      height: auto;
+      border-radius: 0;
+      box-shadow: none;
+
+      &--front {
+        z-index: 0;
+      }
+
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(0);
+    }
+
+    &__details {
+      padding: 1rem 3rem;
+    }
+
+    // Back side
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      width: 100%;
+      padding: 7rem 4rem 4rem;
+    }
+
+    &__price {
+      margin-bottom: 3rem;
+
+      &__value {
+        font-size: 4rem;
+      }
     }
   }
 }
