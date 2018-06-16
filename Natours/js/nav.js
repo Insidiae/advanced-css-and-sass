@@ -3,7 +3,6 @@ const menuCheckbox = document.querySelector(".navigation__checkbox");
 const links = document.querySelectorAll(".navigation__link");
 
 menuCheckbox.addEventListener("change", function() {
-  console.log(this);
   if (this.checked) {
     body.classList.add("u-hide-overflow-y");
   } else {

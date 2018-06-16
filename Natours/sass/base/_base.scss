@@ -9,9 +9,28 @@
 
 /* Set initial font size */
 html {
-  font-size: 62.5%;
+  // This defines what 1rem is
+  // default font size i usually 16px
+  font-size: 62.5%; // 62.5% of 16px = 10px
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 75% of 16px = 12px
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 56.25% of 16px = 9px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 50% of 16px = 8px
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
