@@ -37,6 +37,21 @@ $gutter-horizontal: 6rem;
   }
 }
 
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+      @media only screen and (max-width: 37.5em) { @content }; //600px
+  }
+  @if $breakpoint == tab-port {
+      @media only screen and (max-width: 56.25em) { @content }; //900px
+  }
+  @if $breakpoint == tab-land {
+      @media only screen and (max-width: 75em) { @content }; //1200px
+  }
+  @if $breakpoint == big-desktop {
+      @media only screen and (min-width: 112.5em) { @content }; //1800px
+  }
+}
+
 /* Basic reset for all elements */
 *,
 *::before,
@@ -49,13 +64,21 @@ $gutter-horizontal: 6rem;
 /* Set initial font size */
 html {
   font-size: 62.5%;
+  @include respond(big-desktop) {
+    font-size: 75%; // 75% of 16px = 12px
+  }
+  @include respond(tab-land) {
+    font-size: 56.25%; // 56.25% of 16px = 9px
+  }
+  @include respond(tab-port) {
+    font-size: 50%; // 50% of 16px = 8px
+  }
 }
 
 body {
   min-height: 100vh;
   box-sizing: border-box;
-  background-image: url("img/topography.svg"),
-    linear-gradient(110deg, #588dfd, #fd588d);
+  background-image: linear-gradient(110deg, #588dfd, #fd588d);
 
   /* Set project-wide font definitions */
   font-family: "Lato", sans-serif;
@@ -63,20 +86,18 @@ body {
   line-height: 1.7;
   color: $color-gray-dark;
   padding: 3rem;
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
 
 .heading {
+  width: 90%;
+  margin: 1rem auto;
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  // background-image: linear-gradient(
-  //   to right,
-  //   $color-primary-light-1,
-  //   $color-primary-dark-1
-  // );
-  // -webkit-background-clip: text;
-  // color: transparent;
   color: #58fd8d;
   letter-spacing: 2px;
   transition: all 0.2s;
@@ -108,11 +129,22 @@ body {
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
   }
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
   @include clearfix;
   [class^="col-"] {
     float: left;
+    @include respond(tab-port) {
+      width: 100% !important;
+    }
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: 6rem;
+      }
     }
   }
   @for $max from 2 through 4 {
@@ -341,6 +373,56 @@ body {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+  }
+  // Responsive styles
+  @media only screen and (max-width: 56.25em),
+  only screen and (hover: none) {
+    height: auto;
+    border-radius: 3px;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &__side {
+      position: relative;
+      height: auto;
+      border-radius: 0;
+      box-shadow: none;
+
+      &--front {
+        z-index: 0;
+      }
+
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(0);
+    }
+
+    &__details {
+      padding: 1rem 3rem;
+    }
+
+    // Back side
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      width: 100%;
+      padding: 7rem 4rem 4rem;
+    }
+
+    &__price {
+      margin-bottom: 3rem;
+
+      &__value {
+        font-size: 4rem;
+      }
     }
   }
 }
