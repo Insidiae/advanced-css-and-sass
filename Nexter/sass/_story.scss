@@ -44,4 +44,28 @@
     font-size: 1.5rem;
     font-style: italic;
   }
+
+  @media only screen and (max-width: $bp-medium) {
+    &__content {
+      grid-column: full-start / full-end;
+      grid-row: 5 / span 1;
+    }
+
+    &__pictures {
+      grid-column: full-start / full-end;
+      padding: 6rem;
+    }
+
+    &__img {
+      &--1 {
+        grid-column: 1 / 5;
+        grid-row: 1 / -1;
+      }
+
+      &--2 {
+        width: 100%;
+        grid-row: 1 / -1;
+      }
+    }
+  }
 }

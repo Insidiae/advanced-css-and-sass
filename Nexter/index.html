@@ -16,7 +16,22 @@
   </head>
   <body class="container">
     <nav class="sidebar">
-      <button class="nav-btn"></button>
+      <input type="checkbox" id="nav-toggle" class="nav-checkbox" />
+      <label for="nav-toggle" class="nav-btn">
+        <span class="nav-btn__icon">&nbsp;</span>
+      </label>
+
+      <ul class="sidebar__list">
+        <li class="sidebar__item">
+          <a href="#features" class="sidebar__link">Features</a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#homes" class="sidebar__link">Homes</a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#gallery" class="sidebar__link">Gallery</a>
+        </li>
+      </ul>
     </nav>
 
     <header class="header">
@@ -70,7 +85,7 @@
       </div>
     </section>
 
-    <section class="features">
+    <section id="features" class="features">
       <div class="feature">
         <svg class="feature__icon">
           <use xlink:href="img/sprite.svg#icon-global"></use>
@@ -155,7 +170,7 @@
       <button class="btn">Find your own home</button>
     </div>
 
-    <section class="homes">
+    <section id="homes" class="homes">
       <div class="home">
         <img
           src="img/house-1.jpeg"
@@ -392,7 +407,7 @@
       </div>
     </section>
 
-    <section class="gallery">
+    <section id="gallery" class="gallery">
       <figure class="gallery__item gallery__item--1">
         <img src="img/gal-1.jpeg" alt="Gallery image 1" class="gallery__img" />
       </figure>
@@ -497,5 +512,7 @@
         >. Original Design and Copyright &copy; by Jonas Schmedtmann.
       </p>
     </footer>
+
+    <script src="js/nav.js"></script>
   </body>
 </html>

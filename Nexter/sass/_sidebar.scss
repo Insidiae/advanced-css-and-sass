@@ -1,33 +1,123 @@
 .sidebar {
   display: flex;
-  justify-content: center;
+  position: fixed;
   background-color: $color-primary;
-  grid-column: sidebar-start / sidebar-end;
-  grid-row: 1 / -1;
+  height: 100%;
+  max-width: 8rem;
+  overflow: visible;
+  z-index: 80;
+
+  @media only screen and (max-width: $bp-large) {
+    min-width: 100vw;
+    height: 6rem;
+  }
+}
+
+.sidebar__list {
+  position: absolute;
+  width: 40rem;
+  height: 100%;
+  padding: 8rem 3rem;
+  background: inherit;
+  list-style: none;
+  transform: translateX(-32rem);
+  transition: transform 0.5s;
+  z-index: 90;
+
+  @media only screen and (max-width: $bp-large) {
+    width: 100%;
+    height: calc(100vh);
+    transform: translateY(calc(6rem - 100vh));
+  }
+}
+
+.sidebar__link {
+  &:link,
+  &:visited {
+    display: block;
+    width: max-content;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: $font-display;
+    font-size: 1.6rem;
+    color: $color-grey-light-1;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  &:hover,
+  &:active {
+    transform: translateY(-3px);
+  }
+}
+
+.nav-checkbox {
+  display: none;
 }
 
 .nav-btn {
-  margin-top: 4rem;
-  height: 2px;
-  width: 4.5rem;
-  background-color: $color-grey-light-1;
-  border: none;
-  border-radius: 0;
+  width: 7rem;
+  height: 7rem;
+  position: fixed;
+  top: -0.5rem;
+  left: 0.35rem;
+  text-align: center;
+  cursor: pointer;
+  z-index: 99;
 
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 4.5rem;
-    background-color: $color-grey-light-1;
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+
+    &,
+    &::before,
+    &::after {
+      display: inline-block;
+      width: 4.5rem;
+      height: 2px;
+      background-color: $color-grey-light-1;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -1.3rem;
+    }
+
+    &::after {
+      top: 1.3rem;
+    }
   }
+
+  &:hover &__icon::before {
+    top: -1.5rem;
+  }
+
+  &:hover &__icon::after {
+    top: 1.5rem;
+  }
+}
+
+.nav-checkbox:checked + .nav-btn .nav-btn__icon {
+  background-color: transparent;
 
   &::before {
-    transform: translateY(-1.5rem);
+    top: 0;
+    transform: rotate(135deg);
   }
 
   &::after {
-    transform: translateY(1.3rem);
+    top: 0;
+    transform: rotate(-135deg);
   }
+}
+
+.nav-checkbox:checked ~ .sidebar__list {
+  transform: translate(0);
 }
