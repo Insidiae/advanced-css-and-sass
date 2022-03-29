@@ -1,0 +1,66 @@
+:root {
+  // TYPOGRAPHY SYSTEM
+  /*
+    FONT SIZE SYSTEM [px (rem)]
+    10 (0.625)
+    12 (0.75)
+    14 (0.875)
+    16 (1) 
+    18 (1.125)
+    20 (1.25)
+    24 (1.5)
+    30 (1.875)
+    36 (2.25)
+    44 (2.75)
+    52 (3.25)
+    62 (3.875)
+    74 (4.625)
+    86 (5.375)
+    98 (6.125)
+  */
+
+  // Font weights
+  --font-weight-default: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  // Line heights
+  --line-height-default: 1;
+  --line-height-small: 1.05;
+  --line-height-paragraph: 1.6;
+
+  // COLORS
+
+  // Primary
+  --color-brand: hsl(28deg 80% 52%);
+
+  // Tints
+  --color-brand-light: hsl(27deg 83% 95%);
+
+  // Shades
+  --color-brand-dark: hsl(28deg 74% 47%);
+
+  // Accents
+
+  // Grays
+  --color-gray: hsl(0deg 0% 33%);
+  --color-gray-dark: hsl(0deg 0% 20%);
+
+  // SHADOWS
+
+  // BORDER-RADIUS
+  --radius-default: 9px;
+
+  // WHITESPACE
+  /*
+    SPACING SYSTEM (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+  */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,24 @@
+.section-hero {
+  background-color: var(--color-brand-light);
+  padding: 48px 0 96px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 96px;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 32px;
+
+  &__description {
+    margin-bottom: 48px;
+    font-size: 1.25rem;
+    line-height: var(--line-height-paragraph);
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

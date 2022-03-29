@@ -1,0 +1,29 @@
+.delivered {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 80px;
+
+  &__customers {
+    display: flex;
+  }
+
+  &__customer-photo {
+    height: 48px;
+    border-radius: 50%;
+    border: 3px solid var(--color-brand-light);
+
+    &:not(:last-of-type) {
+      margin-right: -16px;
+    }
+  }
+
+  &__text {
+    font-size: 1.125rem;
+  }
+
+  &__count {
+    color: var(--color-brand-dark);
+    font-weight: var(--font-weight-bold);
+  }
+}
