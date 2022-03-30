@@ -1,3 +1,7 @@
+.section-cta {
+  padding: 48px 0 128px;
+}
+
 .cta {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -7,7 +11,7 @@
     var(--color-brand-light-3),
     var(--color-brand)
   );
-  box-shadow: 0 24px 48px hsl(0deg 0% 0% / 0.015);
+  box-shadow: 0 24px 48px hsl(0deg 0% 0% / 0.15);
   // Truncate border of image content
   overflow: hidden;
 
