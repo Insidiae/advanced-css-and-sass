@@ -11,10 +11,9 @@
   }
 
   &:hover,
-  &:focus,
   &:active {
     border-bottom: 1px solid transparent;
-    color: var(--color-brand-dark);
+    color: var(--color-brand-dark-1);
     transition: border-bottom 300ms, color 300ms;
   }
 }

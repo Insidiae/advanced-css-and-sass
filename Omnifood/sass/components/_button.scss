@@ -9,38 +9,61 @@
     font-weight: var(--font-weight-semibold);
     text-decoration: none;
     transition: background-color 600ms;
+
+    // Only necessary for .btn
+    border: none;
+    cursor: pointer;
   }
 
   &:hover,
-  &:focus,
   &:active {
     transition: background-color 300ms;
   }
 
   &--full {
-    background-color: var(--color-brand);
-    color: white;
+    &,
+    &:link,
+    &:visited {
+      background-color: var(--color-brand);
+      color: white;
+    }
 
     &:hover,
-    &:focus,
     &:active {
-      background-color: var(--color-brand-dark);
+      background-color: var(--color-brand-dark-1);
     }
   }
 
   &--outline {
-    background-color: white;
-    color: var(--color-gray);
-    transition: background-color 600ms, box-shadow 600ms;
-
-    // faux-border
-    box-shadow: inset 0 0 0 3px white;
+    &,
+    &:link,
+    &:visited {
+      background-color: white;
+      color: var(--color-gray);
+      transition: background-color 600ms, box-shadow 600ms;
+    }
 
     &:hover,
-    &:focus,
     &:active {
+      // faux-border
+      box-shadow: inset 0 0 0 3px white;
       background-color: var(--color-brand-light-1);
-      transition: background-color 600ms, box-shadow 600ms;
+      transition: background-color 300ms, box-shadow 300ms;
+    }
+  }
+
+  &--form {
+    align-self: end;
+    padding: 12px;
+    background-color: var(--color-brand-dark-2);
+    color: var(--color-brand-light-1);
+    transition: background-color 600ms, color 600ms;
+
+    &:hover,
+    &:active {
+      background-color: white;
+      color: var(--color-gray);
+      transition: background-color 300ms, color 300ms;
     }
   }
 }

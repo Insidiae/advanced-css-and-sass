@@ -4,7 +4,7 @@
 
 .meal {
   border-radius: var(--radius-medium);
-  box-shadow: 0 24px 48px hsl(0deg 0% 0% / 0.075);
+  box-shadow: var(--shadow-default);
 
   // Snip corners of image content
   overflow: hidden;
@@ -16,7 +16,7 @@
     }
 
     &:hover {
-      box-shadow: 0 32px 64px hsl(0deg 0% 0% / 0.06);
+      box-shadow: var(--shadow-raised);
       transform: translateY(-12px);
       transition: transform 300ms, box-shadow 300ms;
     }
