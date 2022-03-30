@@ -168,23 +168,6 @@ body {
   font-weight: var(--font-weight-bold);
 }
 
-.diet-list {
-  list-style: none;
-}
-
-.diet {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.diet__icon {
-  color: var(--color-brand);
-  font-size: 1.875rem;
-}
-.diet__name {
-  font-size: 1.125rem;
-}
-
 .section-featured {
   padding: 48px 0 32px;
 }
@@ -206,6 +189,25 @@ body {
   height: 32px;
   filter: brightness(0);
   opacity: 0.5;
+}
+
+.icon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+}
+.icon-list__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.icon-list__icon {
+  color: var(--color-brand);
+  font-size: 1.875rem;
+}
+.icon-list__text {
+  font-size: 1.125rem;
 }
 
 .link, .link:link, .link:visited {
@@ -277,6 +279,71 @@ body {
 }
 .meal__stat__text strong {
   font-weight: var(--font-weight-medium);
+}
+
+.section-pricing {
+  padding: 96px 0;
+}
+
+.plan {
+  width: 75%;
+  border-radius: var(--radius-medium);
+}
+.plan--starter {
+  justify-self: end;
+  padding: 46px;
+  border: 2px solid var(--color-brand-light-1);
+}
+.plan--complete {
+  position: relative;
+  padding: 48px;
+  background-color: var(--color-brand-light-1);
+  overflow: hidden;
+}
+.plan--complete::after {
+  content: "Best Value";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 80px;
+  background-color: #ffd53d;
+  color: var(--color-gray-dark);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  transform: translate(30%, 120%) rotate(45deg);
+}
+.plan__header {
+  margin-bottom: 48px;
+  text-align: center;
+}
+.plan__name {
+  color: var(--color-brand-dark);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  margin-bottom: 32px;
+}
+.plan__price {
+  color: var(--color-gray-dark);
+  font-size: 3.875rem;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 16px;
+}
+.plan__price span {
+  margin-right: 8px;
+  font-size: 1.875rem;
+  font-weight: var(--font-weight-medium);
+}
+.plan__tagline {
+  color: var(--color-gray-accessible-2);
+  font-size: 1rem;
+  line-height: var(--line-height-paragraph);
+}
+.plan__sign-up {
+  margin-top: 48px;
+  text-align: center;
 }
 
 .tag {
