@@ -1,0 +1,24 @@
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  background-color: var(--tag-background-color, var(--color-brand));
+  color: var(--tag-color, var(--color-gray-dark));
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+}
+
+.category {
+  &--vegetarian {
+    --tag-background-color: hsl(130deg 57% 56%);
+  }
+
+  &--vegan {
+    --tag-background-color: hsl(84deg 69% 51%);
+  }
+
+  &--paleo {
+    --tag-background-color: hsl(47deg 100% 62%);
+  }
+}

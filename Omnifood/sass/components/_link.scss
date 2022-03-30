@@ -1,0 +1,20 @@
+.link {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding-bottom: 2px;
+    border-bottom: 1px solid currentColor;
+    color: var(--color-brand);
+    text-decoration: none;
+    transition: border-bottom 600ms, color 600ms;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: 1px solid transparent;
+    color: var(--color-brand-dark);
+    transition: border-bottom 300ms, color 300ms;
+  }
+}

@@ -34,6 +34,7 @@
   --color-gray-light-2: hsl(0deg 0% 53%);
   --color-gray-dark: hsl(0deg 0% 20%);
   --radius-default: 9px;
+  --radius-medium: 11px;
   /*
     SPACING SYSTEM (px)
     2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
@@ -98,8 +99,16 @@ body {
   letter-spacing: 0.75px;
 }
 
+.u-center-text {
+  text-align: center !important;
+}
+
 .u-margin-right--sm {
   margin-right: 16px !important;
+}
+
+.u-margin-bottom--md {
+  margin-bottom: 48px !important;
 }
 
 .btn, .btn:link, .btn:visited {
@@ -124,10 +133,12 @@ body {
 .btn--outline {
   background-color: white;
   color: var(--color-gray);
+  transition: background-color 600ms, box-shadow 600ms;
   box-shadow: inset 0 0 0 3px white;
 }
 .btn--outline:hover, .btn--outline:focus, .btn--outline:active {
   background-color: var(--color-brand-light-1);
+  transition: background-color 600ms, box-shadow 600ms;
 }
 
 .delivered {
@@ -155,6 +166,23 @@ body {
   font-weight: var(--font-weight-bold);
 }
 
+.diet-list {
+  list-style: none;
+}
+
+.diet {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.diet__icon {
+  color: var(--color-brand);
+  font-size: 1.875rem;
+}
+.diet__name {
+  font-size: 1.125rem;
+}
+
 .section-featured {
   padding: 48px 0 32px;
 }
@@ -176,6 +204,98 @@ body {
   height: 32px;
   filter: brightness(0);
   opacity: 0.5;
+}
+
+.link, .link:link, .link:visited {
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: 1px solid currentColor;
+  color: var(--color-brand);
+  text-decoration: none;
+  transition: border-bottom 600ms, color 600ms;
+}
+.link:hover, .link:focus, .link:active {
+  border-bottom: 1px solid transparent;
+  color: var(--color-brand-dark);
+  transition: border-bottom 300ms, color 300ms;
+}
+
+.section-meals {
+  padding: 96px 0;
+}
+
+.meal {
+  border-radius: var(--radius-medium);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.075);
+  overflow: hidden;
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .meal {
+    will-change: transform;
+    transition: transform 600ms, box-shadow 600ms;
+  }
+  .meal:hover {
+    box-shadow: 0 32px 64px rgba(0, 0, 0, 0.06);
+    transform: translateY(-12px);
+    transition: transform 300ms, box-shadow 300ms;
+  }
+}
+.meal__img {
+  width: 100%;
+}
+.meal__details {
+  padding: 32px 48px 48px;
+}
+.meal__tags {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+.meal__name {
+  margin-bottom: 32px;
+  color: var(--color-gray-dark);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+}
+.meal__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+}
+.meal__stat {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.125rem;
+}
+.meal__stat__icon {
+  font-size: 1.5rem;
+  color: var(--color-brand);
+}
+.meal__stat__text strong {
+  font-weight: var(--font-weight-medium);
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  background-color: var(--tag-background-color, var(--color-brand));
+  color: var(--tag-color, var(--color-gray-dark));
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+}
+
+.category--vegetarian {
+  --tag-background-color: hsl(130deg 57% 56%);
+}
+.category--vegan {
+  --tag-background-color: hsl(84deg 69% 51%);
+}
+.category--paleo {
+  --tag-background-color: hsl(47deg 100% 62%);
 }
 
 .header {
@@ -310,6 +430,11 @@ body {
 .step__img {
   width: 35%;
   z-index: 1;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.125rem;
 }
 
 /*# sourceMappingURL=style.css.map */
