@@ -1,0 +1,20 @@
+.grid {
+  display: grid;
+  gap: 96px 64px;
+
+  &--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &--center-v {
+    align-items: center;
+  }
+}

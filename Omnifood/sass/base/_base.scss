@@ -28,6 +28,7 @@
   // Line heights
   --line-height-default: 1;
   --line-height-small: 1.05;
+  --line-height-medium: 1.2;
   --line-height-paragraph: 1.6;
 
   // COLORS
@@ -36,7 +37,8 @@
   --color-brand: hsl(28deg 80% 52%);
 
   // Tints
-  --color-brand-light: hsl(27deg 83% 95%);
+  --color-brand-light-1: hsl(27deg 83% 95%);
+  --color-brand-light-2: hsl(27deg 80% 90%);
 
   // Shades
   --color-brand-dark: hsl(28deg 74% 47%);
@@ -45,6 +47,7 @@
 
   // Grays
   --color-gray: hsl(0deg 0% 33%);
+  --color-gray-light: hsl(0deg 0% 87%);
   --color-gray-dark: hsl(0deg 0% 20%);
 
   // SHADOWS
