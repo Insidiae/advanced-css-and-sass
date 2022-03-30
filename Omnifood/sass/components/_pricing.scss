@@ -71,4 +71,10 @@
     margin-top: 48px;
     text-align: center;
   }
+
+  &__disclaimer {
+    font-size: 1rem;
+    line-height: var(--line-height-paragraph);
+    text-align: center;
+  }
 }

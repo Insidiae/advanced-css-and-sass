@@ -191,6 +191,25 @@ body {
   opacity: 0.5;
 }
 
+.feature__icon {
+  margin-bottom: 32px;
+  padding: 16px;
+  border-radius: 50%;
+  background-color: var(--color-brand-light-1);
+  color: var(--color-brand);
+  font-size: 1.5rem;
+}
+.feature__title {
+  margin-bottom: 16px;
+  color: var(--color-gray-dark);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+}
+.feature__text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
 .icon-list {
   display: flex;
   flex-direction: column;
@@ -345,6 +364,11 @@ body {
   margin-top: 48px;
   text-align: center;
 }
+.plan__disclaimer {
+  font-size: 1rem;
+  line-height: var(--line-height-paragraph);
+  text-align: center;
+}
 
 .tag {
   display: inline-block;
@@ -468,6 +492,9 @@ body {
 .grid {
   display: grid;
   gap: 96px 64px;
+}
+.grid:not(:last-child) {
+  margin-bottom: 96px;
 }
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
