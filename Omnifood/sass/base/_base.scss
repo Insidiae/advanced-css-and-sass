@@ -50,6 +50,10 @@
   --color-gray-light-1: hsl(0deg 0% 87%);
   --color-gray-light-2: hsl(0deg 0% 53%);
   --color-gray-dark: hsl(0deg 0% 20%);
+  // Lightest gray allowed on white
+  --color-gray-accessible-1: hsl(0deg 0% 46%);
+  // Lightest gray allowed on color-brand-light-1
+  --color-gray-accessible-2: hsl(0deg 0% 44%);
 
   // SHADOWS
 
