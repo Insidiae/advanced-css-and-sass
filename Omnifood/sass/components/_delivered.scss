@@ -11,7 +11,7 @@
   &__customer-photo {
     height: 48px;
     border-radius: 50%;
-    border: 3px solid var(--color-brand-light);
+    border: 3px solid var(--color-brand-light-1);
 
     &:not(:last-of-type) {
       margin-right: -16px;
@@ -23,7 +23,7 @@
   }
 
   &__count {
-    color: var(--color-brand-dark);
+    color: var(--color-brand-dark-1);
     font-weight: var(--font-weight-bold);
   }
 }

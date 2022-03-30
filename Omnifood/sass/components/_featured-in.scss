@@ -1,0 +1,26 @@
+.section-featured {
+  padding: 48px 0 32px;
+}
+
+.featured {
+  &__heading {
+    margin-bottom: 24px;
+    color: var(--color-gray-light-2);
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    text-align: center;
+  }
+
+  &__logos {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__logo {
+    height: 32px;
+    filter: brightness(0);
+    opacity: 0.5;
+  }
+}

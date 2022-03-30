@@ -17,11 +17,39 @@ body {
   color: var(--color-gray);
 }
 
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  color: var(--color-gray-dark);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.5px;
+}
+
 .heading-primary {
   margin-bottom: 32px;
-  color: var(--color-gray-dark);
   font-size: 3.25rem;
-  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-small);
-  letter-spacing: -0.5px;
+}
+
+.heading-secondary {
+  margin-bottom: 96px;
+  font-size: 2.75rem;
+  line-height: var(--line-height-medium);
+}
+
+.heading-tertiary {
+  margin-bottom: 32px;
+  font-size: 1.875rem;
+  line-height: var(--line-height-medium);
+}
+
+.sub-heading {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--color-brand-dark-1);
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-small);
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
 }

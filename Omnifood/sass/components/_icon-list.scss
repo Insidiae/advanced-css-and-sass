@@ -1,0 +1,21 @@
+.icon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__icon {
+    color: var(--color-brand);
+    font-size: 1.875rem;
+  }
+
+  &__text {
+    font-size: 1.125rem;
+  }
+}
