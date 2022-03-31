@@ -28,5 +28,9 @@
     @include queries.respondTo(tablet-portrait-below) {
       height: 18px;
     }
+
+    @include queries.respondTo(phone-below) {
+      height: 10px;
+    }
   }
 }

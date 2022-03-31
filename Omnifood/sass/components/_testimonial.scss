@@ -12,6 +12,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px 80px;
+
+  @include queries.respondTo(phone-below) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .testimonial {
@@ -64,5 +68,9 @@
 
   @include queries.respondTo(tablet-portrait-below) {
     grid-template-columns: repeat(6, 1fr);
+  }
+
+  @include queries.respondTo(phone-below) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

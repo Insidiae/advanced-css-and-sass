@@ -42,4 +42,14 @@
       grid-template-columns: repeat(6, 1fr);
     }
   }
+
+  @include queries.respondTo(phone-below) {
+    row-gap: 36px;
+
+    &--2-cols,
+    &--3-cols,
+    &--4-cols {
+      grid-template-columns: 1fr;
+    }
+  }
 }

@@ -99,4 +99,17 @@
       grid-template-columns: 1fr;
     }
   }
+
+  @include queries.respondTo(phone-below) {
+    grid-template-columns: 1fr;
+
+    &__content {
+      padding: 24px;
+    }
+
+    &__img-box {
+      grid-row: 1;
+      height: 250px;
+    }
+  }
 }

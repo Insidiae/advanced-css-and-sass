@@ -15,6 +15,10 @@
     // Only necessary for .btn
     border: none;
     cursor: pointer;
+
+    @include queries.respondTo(phone-below) {
+      padding: 18px 12px;
+    }
   }
 
   &:hover,

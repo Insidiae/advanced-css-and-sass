@@ -18,6 +18,10 @@
 
 .logo {
   height: 22px;
+
+  @include queries.respondTo(tablet-portrait-below) {
+    height: 18px;
+  }
 }
 
 .main-nav {
