@@ -1,9 +1,11 @@
+@use "../abstracts/queries";
+
 .footer {
   padding: 128px 0;
   border-top: 1px solid hsl(0, 0%, 93%);
 
   &__heading {
-    font-size: 1.125rem;
+    font-size: var(--font-size-default);
     font-weight: var(--font-weight-medium);
     margin-bottom: 40px;
   }
@@ -12,7 +14,7 @@
     &:link,
     &:visited {
       color: var(--color-gray-accessible-1);
-      font-size: 1rem;
+      font-size: var(--font-size-small);
       text-decoration: none;
       transition: color 600ms;
     }
@@ -41,7 +43,7 @@
   }
 
   &__social-icon {
-    font-size: 1.5rem;
+    font-size: var(--font-size-icon);
   }
 
   &__copyright {
@@ -52,7 +54,7 @@
   }
 
   &__contact-info {
-    font-size: 1rem;
+    font-size: var(--font-size-small);
     font-style: normal;
     line-height: var(--line-height-paragraph);
   }
@@ -66,5 +68,26 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+  }
+
+  @include queries.respondTo(tablet-small-below) {
+    &__heading {
+      margin-bottom: 36px;
+    }
+
+    &__logo-col,
+    &__contact-col {
+      grid-column: span 3;
+    }
+
+    &__nav-col {
+      grid-row: 1;
+      grid-column: span 2;
+      margin-bottom: 24px;
+    }
+
+    &__nav {
+      gap: 18px;
+    }
   }
 }

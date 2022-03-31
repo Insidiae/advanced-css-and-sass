@@ -1,6 +1,12 @@
+@use "../abstracts/queries";
+
 .section-hero {
   background-color: var(--color-brand-light-1);
   padding: 48px 0 96px;
+
+  @include queries.respondTo(phone-below) {
+    padding: 18px 0 52px;
+  }
 }
 
 .hero {
@@ -14,29 +20,64 @@
 
   &__description {
     margin-bottom: 48px;
-    font-size: 1.25rem;
+    font-size: var(--font-size-medium);
     line-height: var(--line-height-paragraph);
   }
 
   &__img {
     width: 100%;
   }
+
+  @include queries.respondTo(small-desktop-below) {
+    max-width: 1200px;
+  }
+
+  @include queries.respondTo(tablet-landscape-below) {
+    gap: 44px;
+  }
+
+  @include queries.respondTo(tablet-portrait-below) {
+    grid-template-columns: 1fr;
+    padding: 0 62px;
+    gap: 44px;
+
+    &__text-box,
+    &__img-box {
+      text-align: center;
+    }
+
+    &__img {
+      width: 60%;
+    }
+  }
+
+  @include queries.respondTo(phone-below) {
+    padding: 0 24px;
+
+    &__img {
+      width: 80%;
+    }
+  }
 }
 
 .section-how {
   padding: 96px 0;
+
+  @include queries.respondTo(tablet-portrait-below) {
+    padding: 74px 0;
+  }
 }
 
 .step {
   &__number {
     margin-bottom: 12px;
     color: var(--color-gray-light-1);
-    font-size: 5.375rem;
+    font-size: clamp(3.875rem, 7.4vw - 1rem, 5.375rem);
     font-weight: var(--font-weight-semibold);
   }
 
   &__description {
-    font-size: 1.125rem;
+    font-size: var(--font-size-default);
     line-height: var(--line-height-paragraph);
   }
 
@@ -77,11 +118,31 @@
     width: 35%;
     z-index: 1;
   }
+
+  @include queries.respondTo(phone-below) {
+    &__img-box {
+      transform: translateY(18px);
+
+      &:nth-child(2) {
+        grid-row: 1;
+      }
+      &:nth-child(6) {
+        grid-row: 5;
+      }
+    }
+  }
+}
+
+.diets {
+  @include queries.respondTo(tablet-small-below) {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
 }
 
 .all-recipes {
   text-align: center;
-  font-size: 1.125rem;
+  font-size: var(--font-size-default);
 }
 
 .section-testimonials {
@@ -89,4 +150,8 @@
   grid-template-columns: 55fr 45fr;
   align-items: center;
   background-color: var(--color-brand-light-1);
+
+  @include queries.respondTo(tablet-portrait-below) {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,0 +1,38 @@
+// Media Query Manager
+/*
+ORDER: Base + typography > general layout + grid > page layout > components
+IMPORTANT: For media queries, 1em = 16px (default)
+*/
+
+@mixin respondTo($breakpoint) {
+  @if $breakpoint == small-desktop-below {
+    /* BELOW 1344px (Smaller desktops) */
+    @media (max-width: 84em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-landscape-below {
+    /* BELOW 1200px (Landscape Tablets) */
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-portrait-below {
+    /* BELOW 944px (Tablets) */
+    @media (max-width: 59em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-small-below {
+    /* BELOW 704px (Smaller tablets) */
+    @media (max-width: 44em) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone-below {
+    /* BELOW 544px (Phones) */
+    @media (max-width: 34em) {
+      @content;
+    }
+  }
+}

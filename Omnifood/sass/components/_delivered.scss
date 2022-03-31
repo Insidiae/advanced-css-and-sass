@@ -1,3 +1,5 @@
+@use "../abstracts/queries";
+
 .delivered {
   display: flex;
   align-items: center;
@@ -19,11 +21,16 @@
   }
 
   &__text {
-    font-size: 1.125rem;
+    font-size: var(--font-size-default);
   }
 
   &__count {
     color: var(--color-brand-dark-1);
     font-weight: var(--font-weight-bold);
+  }
+
+  @include queries.respondTo(tablet-portrait-below) {
+    justify-content: center;
+    margin-top: 24px;
   }
 }

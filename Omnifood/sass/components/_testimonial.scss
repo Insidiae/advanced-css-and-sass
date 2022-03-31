@@ -1,11 +1,21 @@
+@use "../abstracts/queries";
+
 .testimonials-wrapper {
   padding: 96px;
+
+  @include queries.respondTo(tablet-landscape-below) {
+    padding: 86px 30px;
+  }
 }
 
 .testimonials {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px 80px;
+
+  @include queries.respondTo(phone-below) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .testimonial {
@@ -17,12 +27,12 @@
 
   &__text {
     margin-bottom: 16px;
-    font-size: 1.125rem;
+    font-size: var(--font-size-default);
     line-height: var(--line-height-large);
   }
 
   &__author {
-    font-size: 1rem;
+    font-size: var(--font-size-small);
     color: var(--color-gray-accessible-2);
   }
 }
@@ -50,5 +60,17 @@
         transition: transform 400ms;
       }
     }
+  }
+
+  @include queries.respondTo(small-desktop-below) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include queries.respondTo(tablet-portrait-below) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @include queries.respondTo(phone-below) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

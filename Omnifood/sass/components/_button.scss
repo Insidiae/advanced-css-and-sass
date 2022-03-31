@@ -1,3 +1,5 @@
+@use "../abstracts/queries";
+
 .btn {
   &,
   &:link,
@@ -5,7 +7,7 @@
     display: inline-block;
     padding: 16px 32px;
     border-radius: var(--radius-default);
-    font-size: 1.25rem;
+    font-size: var(--font-size-medium);
     font-weight: var(--font-weight-semibold);
     text-decoration: none;
     transition: background-color 600ms;
@@ -13,6 +15,10 @@
     // Only necessary for .btn
     border: none;
     cursor: pointer;
+
+    @include queries.respondTo(phone-below) {
+      padding: 18px 12px;
+    }
   }
 
   &:hover,
@@ -64,6 +70,10 @@
       background-color: white;
       color: var(--color-gray);
       transition: background-color 300ms, color 300ms;
+    }
+
+    @include queries.respondTo(tablet-portrait-below) {
+      margin-top: 10px;
     }
   }
 }

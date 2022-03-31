@@ -1,3 +1,5 @@
+@use "../abstracts/queries";
+
 .section-pricing {
   padding: 96px 0;
 }
@@ -40,7 +42,7 @@
 
   &__name {
     color: var(--color-brand-dark-1);
-    font-size: 1.25rem;
+    font-size: var(--font-size-medium);
     font-weight: var(--font-weight-semibold);
     text-transform: uppercase;
     letter-spacing: 0.75px;
@@ -49,7 +51,7 @@
 
   &__price {
     color: var(--color-gray-dark);
-    font-size: 3.875rem;
+    font-size: clamp(3.25rem, 5.9vw - 1.25rem, 3.875rem);
     font-weight: var(--font-weight-semibold);
     margin-bottom: 16px;
 
@@ -58,12 +60,16 @@
       margin-right: 8px;
       font-size: 1.875rem;
       font-weight: var(--font-weight-medium);
+
+      @include queries.respondTo(tablet-landscape-below) {
+        font-size: 1.5rem;
+      }
     }
   }
 
   &__tagline {
     color: var(--color-gray-accessible-2);
-    font-size: 1rem;
+    font-size: var(--font-size-small);
     line-height: var(--line-height-paragraph);
   }
 
@@ -73,8 +79,12 @@
   }
 
   &__disclaimer {
-    font-size: 1rem;
+    font-size: var(--font-size-small);
     line-height: var(--line-height-paragraph);
     text-align: center;
+  }
+
+  @include queries.respondTo(tablet-small-below) {
+    width: 100%;
   }
 }

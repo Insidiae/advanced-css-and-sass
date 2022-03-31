@@ -1,3 +1,5 @@
+@use "../abstracts/queries";
+
 .grid {
   display: grid;
   gap: 96px 64px;
@@ -24,5 +26,30 @@
 
   &--center-v {
     align-items: center;
+  }
+
+  @include queries.respondTo(tablet-landscape-below) {
+    gap: 52px 36px;
+  }
+
+  @include queries.respondTo(tablet-small-below) {
+    &--3-cols,
+    &--4-cols {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--footer {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  @include queries.respondTo(phone-below) {
+    row-gap: 36px;
+
+    &--2-cols,
+    &--3-cols,
+    &--4-cols {
+      grid-template-columns: 1fr;
+    }
   }
 }

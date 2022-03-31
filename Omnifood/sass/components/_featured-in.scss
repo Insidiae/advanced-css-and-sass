@@ -1,3 +1,5 @@
+@use "../abstracts/queries";
+
 .section-featured {
   padding: 48px 0 32px;
 }
@@ -22,5 +24,13 @@
     height: 32px;
     filter: brightness(0);
     opacity: 0.5;
+
+    @include queries.respondTo(tablet-portrait-below) {
+      height: 18px;
+    }
+
+    @include queries.respondTo(phone-below) {
+      height: 10px;
+    }
   }
 }

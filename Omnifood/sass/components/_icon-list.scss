@@ -1,3 +1,5 @@
+@use "../abstracts/queries";
+
 .icon-list {
   display: flex;
   flex-direction: column;
@@ -13,9 +15,17 @@
   &__icon {
     color: var(--color-brand);
     font-size: 1.875rem;
+
+    @include queries.respondTo(tablet-landscape-below) {
+      font-size: 1.5rem;
+    }
+
+    @include queries.respondTo(tablet-portrait-below) {
+      font-size: 1.25rem;
+    }
   }
 
   &__text {
-    font-size: 1.125rem;
+    font-size: var(--font-size-default);
   }
 }
