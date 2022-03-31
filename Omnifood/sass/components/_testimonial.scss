@@ -61,4 +61,8 @@
   @include queries.respondTo(small-desktop-below) {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @include queries.respondTo(tablet-portrait-below) {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }

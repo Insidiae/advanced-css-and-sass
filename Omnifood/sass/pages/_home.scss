@@ -31,6 +31,21 @@
   @include queries.respondTo(tablet-landscape-below) {
     gap: 44px;
   }
+
+  @include queries.respondTo(tablet-portrait-below) {
+    grid-template-columns: 1fr;
+    padding: 0 62px;
+    gap: 44px;
+
+    &__text-box,
+    &__img-box {
+      text-align: center;
+    }
+
+    &__img {
+      width: 60%;
+    }
+  }
 }
 
 .section-how {
@@ -99,4 +114,8 @@
   grid-template-columns: 55fr 45fr;
   align-items: center;
   background-color: var(--color-brand-light-1);
+
+  @include queries.respondTo(tablet-portrait-below) {
+    grid-template-columns: 1fr;
+  }
 }

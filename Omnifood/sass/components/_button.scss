@@ -1,3 +1,5 @@
+@use "../abstracts/queries";
+
 .btn {
   &,
   &:link,
@@ -64,6 +66,10 @@
       background-color: white;
       color: var(--color-gray);
       transition: background-color 300ms, color 300ms;
+    }
+
+    @include queries.respondTo(tablet-portrait-below) {
+      margin-top: 10px;
     }
   }
 }
