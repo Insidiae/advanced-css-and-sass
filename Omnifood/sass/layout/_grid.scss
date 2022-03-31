@@ -31,4 +31,15 @@
   @include queries.respondTo(tablet-landscape-below) {
     gap: 52px 36px;
   }
+
+  @include queries.respondTo(tablet-small-below) {
+    &--3-cols,
+    &--4-cols {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--footer {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
 }

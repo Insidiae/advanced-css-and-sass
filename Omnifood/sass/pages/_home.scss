@@ -104,6 +104,13 @@
   }
 }
 
+.diets {
+  @include queries.respondTo(tablet-small-below) {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
 .all-recipes {
   text-align: center;
   font-size: var(--font-size-default);

@@ -1,3 +1,5 @@
+@use "../abstracts/queries";
+
 .footer {
   padding: 128px 0;
   border-top: 1px solid hsl(0, 0%, 93%);
@@ -66,5 +68,26 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+  }
+
+  @include queries.respondTo(tablet-small-below) {
+    &__heading {
+      margin-bottom: 36px;
+    }
+
+    &__logo-col,
+    &__contact-col {
+      grid-column: span 3;
+    }
+
+    &__nav-col {
+      grid-row: 1;
+      grid-column: span 2;
+      margin-bottom: 24px;
+    }
+
+    &__nav {
+      gap: 18px;
+    }
   }
 }

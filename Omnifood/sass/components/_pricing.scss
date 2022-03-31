@@ -83,4 +83,8 @@
     line-height: var(--line-height-paragraph);
     text-align: center;
   }
+
+  @include queries.respondTo(tablet-small-below) {
+    width: 100%;
+  }
 }
