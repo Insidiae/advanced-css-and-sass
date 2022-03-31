@@ -83,6 +83,10 @@ body {
   position: relative;
 }
 
+.preload * {
+  transition: none !important;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -699,6 +703,18 @@ body {
   background-color: var(--color-brand-light-1);
   /* BELOW 1200px (Landscape Tablets) */
 }
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
 @media (max-width: 75em) {
   .header {
     padding: 0 30px;
@@ -770,26 +786,26 @@ body {
     pointer-events: none;
     /* 3) Hide it from screen readers */
     visibility: hidden;
-    transition: opacity 400ms ease-out, visibility 400ms ease-out;
+    transition: opacity 400ms ease-in, visibility 400ms ease-in;
   }
   .nav-open .main-nav {
     opacity: 1;
     visibility: visible;
-    transition: opacity 600ms ease-in, visibility 600ms ease-in;
+    transition: opacity 600ms ease-out, visibility 600ms ease-out;
   }
 }
 @media (max-width: 59em) and (prefers-reduced-motion: no-preference) {
   .main-nav {
     will-change: transform;
     transform: translateX(100%);
-    transition: transform 400ms ease-out, opacity 400ms ease-out, visibility 400ms ease-out;
+    transition: transform 400ms ease-in, opacity 400ms ease-in, visibility 400ms ease-in;
   }
   .nav-open .main-nav {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
     transform: translateX(0);
-    transition: transform 600ms ease-in, opacity 600ms ease-in, visibility 600ms ease-in;
+    transition: transform 600ms ease-out, opacity 600ms ease-out, visibility 600ms ease-out;
   }
 }
 @media (max-width: 59em) {
@@ -823,6 +839,7 @@ body {
 @media (max-width: 59em) {
   .mobile-nav__btn {
     display: block;
+    z-index: 999;
   }
   .nav-open .mobile-nav__icon[name=close-outline] {
     display: block;
@@ -968,6 +985,9 @@ body {
   background-color: var(--color-brand-light-1);
   padding: 48px 0 96px;
   /* BELOW 544px (Phones) */
+}
+.sticky .section-hero {
+  margin-top: 96px;
 }
 @media (max-width: 34em) {
   .section-hero {

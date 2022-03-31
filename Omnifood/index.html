@@ -4,10 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+
+    <meta
+      property="og:url"
+      content="https://insidiae.github.io/advanced-css-and-sass/Omnifood/index.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Omnifood — Never cook again!" />
+    <meta
+      property="og:description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+    <meta
+      property="og:image"
+      content="https://insidiae.github.io/advanced-css-and-sass/Omnifood/img/gallery/gallery-1.jpg"
+    />
+    <meta property="og:image:alt" content="Omnifood" />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Omnifood — Never cook again!" />
+    <meta
+      name="twitter:image"
+      content="https://insidiae.github.io/advanced-css-and-sass/Omnifood/img/gallery/gallery-1.jpg"
+    />
+    <meta name="twitter:image:alt" content="Omnifood" />
+    <meta
+      name="twitter:description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
     <link rel="stylesheet" href="css/style.css" />
-    <title>Omnifood</title>
+    <title>Omnifood &mdash; Never cook again!</title>
   </head>
-  <body>
+  <body class="preload">
     <header class="header">
       <a href="#">
         <img class="logo" src="img/omnifood-logo.png" alt="Omnifood logo" />
@@ -15,19 +56,19 @@
       <nav class="main-nav">
         <ul class="main-nav__links">
           <li>
-            <a class="main-nav__link" href="#">How it works</a>
+            <a class="main-nav__link" href="#how-it-works">How it works</a>
           </li>
           <li>
-            <a class="main-nav__link" href="#">Meals</a>
+            <a class="main-nav__link" href="#meals">Meals</a>
           </li>
           <li>
-            <a class="main-nav__link" href="#">Testimonials</a>
+            <a class="main-nav__link" href="#testimonials">Testimonials</a>
           </li>
           <li>
-            <a class="main-nav__link" href="#">Pricing</a>
+            <a class="main-nav__link" href="#pricing">Pricing</a>
           </li>
           <li>
-            <a class="main-nav__link main-nav__link--cta" href="#"
+            <a class="main-nav__link main-nav__link--cta" href="#sign-up"
               >Try for free</a
             >
           </li>
@@ -97,11 +138,15 @@
             </div>
           </div>
           <div class="hero__img-box">
-            <img
-              class="hero__img"
-              src="img/hero.png"
-              alt="Multiple ways to enjoy Omnifood (Woman enjoying food, meals in storge container, and food bowls in a table)"
-            />
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero-min.png" type="image/png" />
+              <img
+                class="hero__img"
+                src="img/hero-min.png"
+                alt="Multiple ways to enjoy Omnifood (Woman enjoying food, meals in storge container, and food bowls in a table)"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -139,7 +184,7 @@
         </div>
       </section>
 
-      <section class="section-how">
+      <section id="how-it-works" class="section-how">
         <div class="container">
           <span class="sub-heading">How it works</span>
           <h2 class="heading-secondary">
@@ -207,7 +252,7 @@
         </div>
       </section>
 
-      <section class="section-meals">
+      <section id="meals" class="section-meals">
         <div class="container u-center-text">
           <span class="sub-heading">How it works</span>
           <h2 class="heading-secondary">
@@ -376,7 +421,7 @@
         </div>
       </section>
 
-      <section class="section-testimonials">
+      <section id="testimonials" class="section-testimonials">
         <div class="testimonials-wrapper">
           <span class="sub-heading">Testimonials</span>
           <h2 class="heading-secondary">Once you try it, you can't go back</h2>
@@ -523,7 +568,7 @@
         </div>
       </section>
 
-      <section class="section-pricing">
+      <section id="pricing" class="section-pricing">
         <div class="container">
           <span class="sub-heading">Pricing</span>
           <h2 class="heading-secondary">
@@ -569,7 +614,7 @@
               </li>
             </ul>
             <div class="plan__sign-up">
-              <a href="#" class="btn btn--full">Start eating well</a>
+              <a href="#sign-up" class="btn btn--full">Start eating well</a>
             </div>
           </div>
           <div class="plan plan--complete">
@@ -616,7 +661,7 @@
               </li>
             </ul>
             <div class="plan__sign-up">
-              <a href="#" class="btn btn--full">Start eating well</a>
+              <a href="#sign-up" class="btn btn--full">Start eating well</a>
             </div>
           </div>
         </div>
@@ -664,7 +709,7 @@
         </div>
       </section>
 
-      <section class="section-cta">
+      <section id="sign-up" class="section-cta">
         <div class="container">
           <div class="cta">
             <div class="cta__content">
@@ -767,7 +812,8 @@
           </ul>
 
           <p class="footer__copyright">
-            Copyright &copy; 2022 by Omnifood, Inc. All rights reserved.
+            Copyright &copy; <span class="year">2022</span> by Omnifood, Inc.
+            All rights reserved.
           </p>
         </div>
 
@@ -848,5 +894,10 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
   </body>
 </html>

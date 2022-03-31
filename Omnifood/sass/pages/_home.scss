@@ -4,6 +4,10 @@
   background-color: var(--color-brand-light-1);
   padding: 48px 0 96px;
 
+  .sticky & {
+    margin-top: 96px;
+  }
+
   @include queries.respondTo(phone-below) {
     padding: 18px 0 52px;
   }
