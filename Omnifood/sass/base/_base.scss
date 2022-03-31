@@ -99,12 +99,22 @@
 html {
   // Hide the mobile nav offscreen
   overflow-x: hidden;
+
+  // We use JS to polyfill this on older browsers,
+  // but this also works if you're only targeting modern browsers:
+  // @media (prefers-reduced-motion: no-preference) {
+  //   scroll-behavior: smooth;
+  // }
 }
 
 body {
   // Only works if there is nothing absolutely positioned in relation to body
   overflow-x: hidden;
   position: relative;
+}
+
+.preload * {
+  transition: none !important;
 }
 
 * {

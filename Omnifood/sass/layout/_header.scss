@@ -11,6 +11,19 @@
   padding: 0 48px;
   background-color: var(--color-brand-light-1);
 
+  .sticky & {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: hsl(0deg 0% 100% / 0.97);
+    z-index: 999;
+    box-shadow: 0 1.2rem 3.2rem hsla(0deg 0% 0% / 0.03);
+  }
+
   @include queries.respondTo(tablet-landscape-below) {
     padding: 0 30px;
   }
@@ -97,25 +110,25 @@
     /* 3) Hide it from screen readers */
     visibility: hidden;
 
-    transition: opacity 400ms ease-out, visibility 400ms ease-out;
+    transition: opacity 400ms ease-in, visibility 400ms ease-in;
     .nav-open & {
       opacity: 1;
       visibility: visible;
-      transition: opacity 600ms ease-in, visibility 600ms ease-in;
+      transition: opacity 600ms ease-out, visibility 600ms ease-out;
     }
 
     @media (prefers-reduced-motion: no-preference) {
       will-change: transform;
       transform: translateX(100%);
-      transition: transform 400ms ease-out, opacity 400ms ease-out,
-        visibility 400ms ease-out;
+      transition: transform 400ms ease-in, opacity 400ms ease-in,
+        visibility 400ms ease-in;
       .nav-open & {
         opacity: 1;
         pointer-events: auto;
         visibility: visible;
         transform: translateX(0);
-        transition: transform 600ms ease-in, opacity 600ms ease-in,
-          visibility 600ms ease-in;
+        transition: transform 600ms ease-out, opacity 600ms ease-out,
+          visibility 600ms ease-out;
       }
     }
 
