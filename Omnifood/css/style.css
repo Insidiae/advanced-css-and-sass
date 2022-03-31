@@ -55,6 +55,7 @@ IMPORTANT: For media queries, 1em = 16px (default)
     2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
   */
   /* BELOW 1200px (Landscape Tablets) */
+  /* BELOW 944px (Tablets) */
 }
 @media (max-width: 75em) {
   :root {
@@ -62,6 +63,14 @@ IMPORTANT: For media queries, 1em = 16px (default)
     --font-size-default: 1rem;
     --font-size-medium: 1.125rem;
     --font-size-icon: 1.25rem;
+  }
+}
+@media (max-width: 59em) {
+  :root {
+    --font-size-small: 0.75rem;
+    --font-size-default: 0.875rem;
+    --font-size-medium: 1rem;
+    --font-size-icon: 1.125rem;
   }
 }
 
@@ -101,26 +110,14 @@ body {
 
 .heading-primary {
   margin-bottom: 32px;
-  font-size: 3.25rem;
+  font-size: clamp(2.2rem, 5.5vw - 1rem, 3.3rem);
   line-height: var(--line-height-small);
-  /* BELOW 1344px (Smaller desktops) */
-}
-@media (max-width: 84em) {
-  .heading-primary {
-    font-size: 2.75rem;
-  }
 }
 
 .heading-secondary {
   margin-bottom: 96px;
-  font-size: 2.75rem;
+  font-size: clamp(1.9rem, 2vw + 1rem, 2.8rem);
   line-height: var(--line-height-medium);
-  /* BELOW 1200px (Landscape Tablets) */
-}
-@media (max-width: 75em) {
-  .heading-secondary {
-    font-size: 1.875rem;
-  }
 }
 
 .heading-tertiary {
@@ -356,10 +353,16 @@ body {
   color: var(--color-brand);
   font-size: 1.875rem;
   /* BELOW 1200px (Landscape Tablets) */
+  /* BELOW 944px (Tablets) */
 }
 @media (max-width: 75em) {
   .icon-list__icon {
     font-size: 1.5rem;
+  }
+}
+@media (max-width: 59em) {
+  .icon-list__icon {
+    font-size: 1.25rem;
   }
 }
 .icon-list__text {
@@ -483,15 +486,9 @@ body {
 }
 .plan__price {
   color: var(--color-gray-dark);
-  font-size: 3.875rem;
+  font-size: clamp(3.25rem, 5.9vw - 1.25rem, 3.875rem);
   font-weight: var(--font-weight-semibold);
   margin-bottom: 16px;
-  /* BELOW 1200px (Landscape Tablets) */
-}
-@media (max-width: 75em) {
-  .plan__price {
-    font-size: 3.25rem;
-  }
 }
 .plan__price span {
   margin-right: 8px;
@@ -795,14 +792,8 @@ body {
 .step__number {
   margin-bottom: 12px;
   color: var(--color-gray-light-1);
-  font-size: 5.375rem;
+  font-size: clamp(3.875rem, 7.4vw - 1rem, 5.375rem);
   font-weight: var(--font-weight-semibold);
-  /* BELOW 1200px (Landscape Tablets) */
-}
-@media (max-width: 75em) {
-  .step__number {
-    font-size: 4.625rem;
-  }
 }
 .step__description {
   font-size: var(--font-size-default);

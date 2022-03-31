@@ -86,6 +86,14 @@
 
     --font-size-icon: 1.25rem;
   }
+
+  @include queries.respondTo(tablet-portrait-below) {
+    --font-size-small: 0.75rem;
+    --font-size-default: 0.875rem;
+    --font-size-medium: 1rem;
+
+    --font-size-icon: 1.125rem;
+  }
 }
 
 * {

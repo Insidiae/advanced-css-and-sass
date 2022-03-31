@@ -41,13 +41,8 @@
   &__number {
     margin-bottom: 12px;
     color: var(--color-gray-light-1);
-    font-size: 5.375rem;
+    font-size: clamp(3.875rem, 7.4vw - 1rem, 5.375rem);
     font-weight: var(--font-weight-semibold);
-
-    //TODO: Use fluid typography
-    @include queries.respondTo(tablet-landscape-below) {
-      font-size: 4.625rem;
-    }
   }
 
   &__description {

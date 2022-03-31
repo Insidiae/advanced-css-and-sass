@@ -19,6 +19,10 @@
     @include queries.respondTo(tablet-landscape-below) {
       font-size: 1.5rem;
     }
+
+    @include queries.respondTo(tablet-portrait-below) {
+      font-size: 1.25rem;
+    }
   }
 
   &__text {

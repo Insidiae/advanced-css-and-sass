@@ -29,24 +29,32 @@ body {
 
 .heading-primary {
   margin-bottom: 32px;
-  font-size: 3.25rem;
+  // font-size: 3.25rem;
+  font-size: clamp(2.2rem, 5.5vw - 1rem, 3.3rem);
   line-height: var(--line-height-small);
 
   //TODO: Use fluid typography
-  @include queries.respondTo(small-desktop-below) {
-    font-size: 2.75rem;
-  }
+  // @include queries.respondTo(small-desktop-below) {
+  //   font-size: 2.75rem;
+  // }
+  // @include queries.respondTo(tablet-portrait-below) {
+  //   font-size: 2.25rem;
+  // }
 }
 
 .heading-secondary {
   margin-bottom: 96px;
-  font-size: 2.75rem;
+  // font-size: 2.75rem;
+  font-size: clamp(1.9rem, 2vw + 1rem, 2.8rem);
   line-height: var(--line-height-medium);
 
   //TODO: Use fluid typography
-  @include queries.respondTo(tablet-landscape-below) {
-    font-size: 1.875rem;
-  }
+  // @include queries.respondTo(tablet-landscape-below) {
+  //   font-size: 1.875rem;
+  // }
+  // @include queries.respondTo(tablet-small-below) {
+  //   font-size: 1.875rem; //28.8px
+  // }
 }
 
 .heading-tertiary {
@@ -54,7 +62,6 @@ body {
   font-size: 1.875rem;
   line-height: var(--line-height-medium);
 
-  //TODO: Use fluid typography
   @include queries.respondTo(tablet-landscape-below) {
     font-size: 1.25rem;
   }

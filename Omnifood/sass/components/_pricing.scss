@@ -51,14 +51,9 @@
 
   &__price {
     color: var(--color-gray-dark);
-    font-size: 3.875rem;
+    font-size: clamp(3.25rem, 5.9vw - 1.25rem, 3.875rem);
     font-weight: var(--font-weight-semibold);
     margin-bottom: 16px;
-
-    //TODO: Use fluid typography
-    @include queries.respondTo(tablet-landscape-below) {
-      font-size: 3.25rem;
-    }
 
     // Currency symbol
     & span {
@@ -66,7 +61,6 @@
       font-size: 1.875rem;
       font-weight: var(--font-weight-medium);
 
-      //TODO: Use fluid typography
       @include queries.respondTo(tablet-landscape-below) {
         font-size: 1.5rem;
       }
