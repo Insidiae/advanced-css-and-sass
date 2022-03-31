@@ -78,61 +78,34 @@ body {
 }
 
 .row {
-  max-width: 114rem;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 6rem;
 }
-.row:not(:last-child) {
-  margin-bottom: 8rem;
+
+.col {
+  flex: 0 0 300px;
 }
-@media only screen and (max-width: 56.25em) {
-  .row {
-    max-width: 50rem;
-    padding: 0 3rem;
+@media only screen and (min-width: 112.5em) {
+  .col {
+    flex: 0 0 400px;
   }
 }
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.row [class^=col-] {
-  float: left;
-}
 @media only screen and (max-width: 56.25em) {
-  .row [class^=col-] {
-    width: 100% !important;
+  .col {
+    flex: 0 0 350px;
   }
 }
-.row [class^=col-]:not(:last-child) {
-  margin-right: 6rem;
-}
-@media only screen and (max-width: 56.25em) {
-  .row [class^=col-]:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 6rem;
+@media only screen and (max-width: 37.5em) {
+  .col {
+    flex: 0 0 300px;
   }
-}
-.row .col-1-of-2 {
-  width: calc( 1 * (100% - (2 - 1) * 6rem) / 2 + (1 - 1) * 6rem );
-}
-.row .col-1-of-3 {
-  width: calc( 1 * (100% - (3 - 1) * 6rem) / 3 + (1 - 1) * 6rem );
-}
-.row .col-2-of-3 {
-  width: calc( 2 * (100% - (3 - 1) * 6rem) / 3 + (2 - 1) * 6rem );
-}
-.row .col-1-of-4 {
-  width: calc( 1 * (100% - (4 - 1) * 6rem) / 4 + (1 - 1) * 6rem );
-}
-.row .col-2-of-4 {
-  width: calc( 2 * (100% - (4 - 1) * 6rem) / 4 + (2 - 1) * 6rem );
-}
-.row .col-3-of-4 {
-  width: calc( 3 * (100% - (4 - 1) * 6rem) / 4 + (3 - 1) * 6rem );
 }
 
 .projects {
-  padding-top: 5rem;
+  padding: 5rem 0;
 }
 
 .btn, .btn:link, .btn:visited {
@@ -189,6 +162,7 @@ body {
   position: relative;
   -moz-perspective: 150rem;
   perspective: 150rem;
+  width: 100%;
   height: 52rem;
 }
 .card__side {
@@ -219,6 +193,9 @@ body {
 .card__side--back--3 {
   background-image: linear-gradient(to right bottom, #c69963, #b28451);
 }
+.card__side--back--4 {
+  background-image: linear-gradient(to right bottom, hsl(28deg, 80%, 52%), hsl(28deg, 80%, 61%));
+}
 .card:hover .card__side--front {
   transform: rotateY(-180deg);
 }
@@ -242,6 +219,9 @@ body {
 }
 .card__picture--3 {
   background-image: linear-gradient(to right bottom, #c69963, #b28451), url(img/nexter-bg.jpg);
+}
+.card__picture--4 {
+  background-image: linear-gradient(to right bottom, hsl(28deg, 80%, 52%), hsl(28deg, 80%, 61%)), url(img/omnifood-bg.jpg);
 }
 .card__heading {
   position: absolute;
@@ -267,6 +247,9 @@ body {
 }
 .card__heading-container--3 {
   background-image: linear-gradient(to right bottom, rgba(198, 153, 99, 0.85), rgba(178, 132, 81, 0.85));
+}
+.card__heading-container--4 {
+  background-image: linear-gradient(to right bottom, rgba(231, 126, 35, 0.85), rgba(235, 150, 76, 0.85));
 }
 .card__details {
   padding: 3rem;
@@ -307,7 +290,7 @@ body {
 }
 @media only screen and (max-width: 56.25em), only screen and (hover: none) {
   .card {
-    height: auto;
+    height: max-content;
     border-radius: 3px;
     background-color: #fff;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
