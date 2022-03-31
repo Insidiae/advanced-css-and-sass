@@ -3,7 +3,7 @@
   border-top: 1px solid hsl(0, 0%, 93%);
 
   &__heading {
-    font-size: 1.125rem;
+    font-size: var(--font-size-default);
     font-weight: var(--font-weight-medium);
     margin-bottom: 40px;
   }
@@ -12,7 +12,7 @@
     &:link,
     &:visited {
       color: var(--color-gray-accessible-1);
-      font-size: 1rem;
+      font-size: var(--font-size-small);
       text-decoration: none;
       transition: color 600ms;
     }
@@ -41,7 +41,7 @@
   }
 
   &__social-icon {
-    font-size: 1.5rem;
+    font-size: var(--font-size-icon);
   }
 
   &__copyright {
@@ -52,7 +52,7 @@
   }
 
   &__contact-info {
-    font-size: 1rem;
+    font-size: var(--font-size-small);
     font-style: normal;
     line-height: var(--line-height-paragraph);
   }

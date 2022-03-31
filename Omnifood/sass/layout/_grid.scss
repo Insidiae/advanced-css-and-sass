@@ -1,3 +1,5 @@
+@use "../abstracts/queries";
+
 .grid {
   display: grid;
   gap: 96px 64px;
@@ -24,5 +26,9 @@
 
   &--center-v {
     align-items: center;
+  }
+
+  @include queries.respondTo(tablet-landscape-below) {
+    gap: 52px 36px;
   }
 }

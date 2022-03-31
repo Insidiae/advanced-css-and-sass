@@ -1,3 +1,5 @@
+@use "../abstracts/queries";
+
 .section-hero {
   background-color: var(--color-brand-light-1);
   padding: 48px 0 96px;
@@ -14,12 +16,20 @@
 
   &__description {
     margin-bottom: 48px;
-    font-size: 1.25rem;
+    font-size: var(--font-size-medium);
     line-height: var(--line-height-paragraph);
   }
 
   &__img {
     width: 100%;
+  }
+
+  @include queries.respondTo(small-desktop-below) {
+    max-width: 1200px;
+  }
+
+  @include queries.respondTo(tablet-landscape-below) {
+    gap: 44px;
   }
 }
 
@@ -33,10 +43,15 @@
     color: var(--color-gray-light-1);
     font-size: 5.375rem;
     font-weight: var(--font-weight-semibold);
+
+    //TODO: Use fluid typography
+    @include queries.respondTo(tablet-landscape-below) {
+      font-size: 4.625rem;
+    }
   }
 
   &__description {
-    font-size: 1.125rem;
+    font-size: var(--font-size-default);
     line-height: var(--line-height-paragraph);
   }
 
@@ -81,7 +96,7 @@
 
 .all-recipes {
   text-align: center;
-  font-size: 1.125rem;
+  font-size: var(--font-size-default);
 }
 
 .section-testimonials {

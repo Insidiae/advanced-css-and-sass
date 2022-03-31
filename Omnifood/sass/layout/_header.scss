@@ -1,3 +1,5 @@
+@use "../abstracts/queries";
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -8,6 +10,10 @@
 
   padding: 0 48px;
   background-color: var(--color-brand-light-1);
+
+  @include queries.respondTo(tablet-landscape-below) {
+    padding: 0 30px;
+  }
 }
 
 .logo {
@@ -18,8 +24,12 @@
   &__links {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 44px;
     list-style: none;
+
+    @include queries.respondTo(tablet-landscape-below) {
+      gap: 30px;
+    }
   }
 
   &__link {
@@ -28,7 +38,7 @@
     &:visited {
       display: inline-block;
       color: var(--color-gray-dark);
-      font-size: 1.125rem;
+      font-size: var(--font-size-default);
       font-weight: var(--font-weight-medium);
       text-decoration: none;
       transition: color 900ms;

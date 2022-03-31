@@ -1,3 +1,5 @@
+@use "../abstracts/queries";
+
 .section-pricing {
   padding: 96px 0;
 }
@@ -40,7 +42,7 @@
 
   &__name {
     color: var(--color-brand-dark-1);
-    font-size: 1.25rem;
+    font-size: var(--font-size-medium);
     font-weight: var(--font-weight-semibold);
     text-transform: uppercase;
     letter-spacing: 0.75px;
@@ -53,17 +55,27 @@
     font-weight: var(--font-weight-semibold);
     margin-bottom: 16px;
 
+    //TODO: Use fluid typography
+    @include queries.respondTo(tablet-landscape-below) {
+      font-size: 3.25rem;
+    }
+
     // Currency symbol
     & span {
       margin-right: 8px;
       font-size: 1.875rem;
       font-weight: var(--font-weight-medium);
+
+      //TODO: Use fluid typography
+      @include queries.respondTo(tablet-landscape-below) {
+        font-size: 1.5rem;
+      }
     }
   }
 
   &__tagline {
     color: var(--color-gray-accessible-2);
-    font-size: 1rem;
+    font-size: var(--font-size-small);
     line-height: var(--line-height-paragraph);
   }
 
@@ -73,7 +85,7 @@
   }
 
   &__disclaimer {
-    font-size: 1rem;
+    font-size: var(--font-size-small);
     line-height: var(--line-height-paragraph);
     text-align: center;
   }

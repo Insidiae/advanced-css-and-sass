@@ -1,3 +1,5 @@
+@use "../abstracts/queries";
+
 // Self-host an optimized font
 @font-face {
   font-family: "Rubik";
@@ -29,25 +31,40 @@ body {
   margin-bottom: 32px;
   font-size: 3.25rem;
   line-height: var(--line-height-small);
+
+  //TODO: Use fluid typography
+  @include queries.respondTo(small-desktop-below) {
+    font-size: 2.75rem;
+  }
 }
 
 .heading-secondary {
   margin-bottom: 96px;
   font-size: 2.75rem;
   line-height: var(--line-height-medium);
+
+  //TODO: Use fluid typography
+  @include queries.respondTo(tablet-landscape-below) {
+    font-size: 1.875rem;
+  }
 }
 
 .heading-tertiary {
   margin-bottom: 32px;
   font-size: 1.875rem;
   line-height: var(--line-height-medium);
+
+  //TODO: Use fluid typography
+  @include queries.respondTo(tablet-landscape-below) {
+    font-size: 1.25rem;
+  }
 }
 
 .sub-heading {
   display: block;
   margin-bottom: 16px;
   color: var(--color-brand-dark-1);
-  font-size: 1rem;
+  font-size: var(--font-size-small);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-small);
   text-transform: uppercase;
