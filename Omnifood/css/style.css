@@ -839,6 +839,7 @@ body {
 @media (max-width: 59em) {
   .mobile-nav__btn {
     display: block;
+    z-index: 999;
   }
   .nav-open .mobile-nav__icon[name=close-outline] {
     display: block;

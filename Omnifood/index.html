@@ -4,8 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+
+    <meta
+      property="og:url"
+      content="https://insidiae.github.io/advanced-css-and-sass/Omnifood/index.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Omnifood — Never cook again!" />
+    <meta
+      property="og:description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+    <meta
+      property="og:image"
+      content="https://insidiae.github.io/advanced-css-and-sass/Omnifood/img/gallery/gallery-1.jpg"
+    />
+    <meta property="og:image:alt" content="Omnifood" />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Omnifood — Never cook again!" />
+    <meta
+      name="twitter:image"
+      content="https://insidiae.github.io/advanced-css-and-sass/Omnifood/img/gallery/gallery-1.jpg"
+    />
+    <meta name="twitter:image:alt" content="Omnifood" />
+    <meta
+      name="twitter:description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
     <link rel="stylesheet" href="css/style.css" />
-    <title>Omnifood</title>
+    <title>Omnifood &mdash; Never cook again!</title>
   </head>
   <body class="preload">
     <header class="header">
@@ -97,11 +138,15 @@
             </div>
           </div>
           <div class="hero__img-box">
-            <img
-              class="hero__img"
-              src="img/hero.png"
-              alt="Multiple ways to enjoy Omnifood (Woman enjoying food, meals in storge container, and food bowls in a table)"
-            />
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero-min.png" type="image/png" />
+              <img
+                class="hero__img"
+                src="img/hero-min.png"
+                alt="Multiple ways to enjoy Omnifood (Woman enjoying food, meals in storge container, and food bowls in a table)"
+              />
+            </picture>
           </div>
         </div>
       </section>

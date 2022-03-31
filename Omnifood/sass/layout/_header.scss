@@ -167,6 +167,7 @@
   @include queries.respondTo(tablet-portrait-below) {
     &__btn {
       display: block;
+      z-index: 999;
     }
 
     .nav-open &__icon {

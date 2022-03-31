@@ -1,0 +1,9 @@
+{
+  "name": "Omnifood — Never cook again!",
+  "short_name": "Omnifood",
+  "theme_color": "#e67e22",
+  "icons": [
+    { "src": "img/favicon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "img/favicon-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}

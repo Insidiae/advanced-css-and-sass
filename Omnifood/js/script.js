@@ -46,12 +46,12 @@ allLinks.forEach(function (link) {
 
     // Close mobile naviagtion
     if (link.classList.contains("main-nav__link"))
-      headerEl.classList.toggle("nav-open");
+      header.classList.toggle("nav-open");
   });
 });
 
 // Sticky navigation
-const sectionHeroEl = document.querySelector(".section-hero");
+const heroSection = document.querySelector(".section-hero");
 
 const obs = new IntersectionObserver(
   function (entries) {
@@ -73,4 +73,4 @@ const obs = new IntersectionObserver(
     rootMargin: "-80px",
   }
 );
-obs.observe(sectionHeroEl);
+obs.observe(heroSection);
